@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/blacklivesmatter/.dotnet/store/|arch|/|tfm|",
+      "/Users/blacklivesmatter/.nuget/packages"
+    ]
+  }
+}
