@@ -1,6 +1,7 @@
 ﻿using System;
 using CartManagement.Business.Interfaces;
 using CartManagement.DataLayer.Interfaces;
+using CartManagement.Domain;
 using CartManagement.Domain.Entities;
 using CartManagement.Domain.Responses;
 
@@ -21,49 +22,40 @@ namespace CartManagement.Business.Services
 
         public AddProductToCartResponse AddProductToCart(int productId, int customerId, int quantity)
         {
-            try
+            Product product = _productRepository.GetProduct(productId);
+            if (product == null)
             {
-                Product product = _productRepository.GetProduct(productId);
-                if (product == null)
-                {
-                    return new AddProductToCartResponse {
-                        ErrorMessage = "Ürün bulunamadı."
-                    };
-                }
-                if (product.Quantity <= 0)
-                {
-                    return new AddProductToCartResponse {
-                        ErrorMessage = "Bu ürün stokta bulunmamaktadır.", ProductName = product.Name
-                    };
-                }
-                if (product.Quantity < quantity)
-                {
-                    return new AddProductToCartResponse {
-                        ErrorMessage = string.Format("Bu üründen yeterince bulunmamaktadır. Stok adedi: {0}", product.Quantity ),
-                        ProductName = product.Name
-                    };
-                }
-                Customer customer = _customerRepository.GetCustomer(customerId);
-                if (customer == null)
-                {
-                    return new AddProductToCartResponse {
-                        ErrorMessage = "Müşteri bulunamadı.",
-                        ProductName = product.Name
-                    };
-                }
-                _cartRepository.AddProductToCart(product, customer, quantity);
                 return new AddProductToCartResponse {
-                    ResultMessage = string.Format("{0} ürünü sepetinize başarıyla eklendi.", product.Name),
+                    ErrorMessage = ConstantMessages.PRODUCT_NOT_FOUND
+                };
+            }
+            if (product.Quantity <= 0)
+            {
+                return new AddProductToCartResponse {
+                    ErrorMessage = ConstantMessages.NO_STOCK,
                     ProductName = product.Name
                 };
             }
-            catch (Exception ex)
+            if (product.Quantity < quantity)
             {
                 return new AddProductToCartResponse {
-                    ErrorMessage= "Bir hata oluştu.Lütfen tekrar deneyiniz!"
+                    ErrorMessage = ConstantMessages.NOT_ENOUGH_STOCK,
+                    ProductName = product.Name
                 };
             }
-            
+            Customer customer = _customerRepository.GetCustomer(customerId);
+            if (customer == null)
+            {
+                return new AddProductToCartResponse {
+                    ErrorMessage = ConstantMessages.CUSTOMER_NOT_FOUND,
+                    ProductName = product.Name
+                };
+            }
+            _cartRepository.AddProductToCart(product, customer, quantity);
+            return new AddProductToCartResponse {
+                ResultMessage = ConstantMessages.PRODUCT_ADDED,
+                ProductName = product.Name
+            };
         }
 
     }
