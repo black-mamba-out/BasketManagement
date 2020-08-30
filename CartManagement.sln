@@ -1,0 +1,55 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartManagement", "CartManagement\CartManagement.csproj", "{5B78EF16-9216-4914-A037-651D29AD4837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1CB5CABB-3BF4-45E0-A421-E28EB771BA2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{E8D7B551-5D1A-4445-B93E-FA41903DA7DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartManagement.UnitTests", "CartManagement.UnitTests\CartManagement.UnitTests.csproj", "{3EF36A42-3280-41AA-9FAB-790A61B00969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartManagement.Business", "CartManagement.Business\CartManagement.Business.csproj", "{04FB9079-FD46-417E-8BC7-ED696BE2F2F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartManagement.DataLayer", "CartManagement.DataLayer\CartManagement.DataLayer.csproj", "{AE7D24C3-E4C6-468C-8D39-EC1A77570C29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartManagement.Domain", "CartManagement.Domain\CartManagement.Domain.csproj", "{FC6A35BF-EE9C-46E7-B200-3ED7B21B8CC5}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C950BCBE-1C03-4BD4-8F60-18CE8E0A53FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B78EF16-9216-4914-A037-651D29AD4837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B78EF16-9216-4914-A037-651D29AD4837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B78EF16-9216-4914-A037-651D29AD4837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B78EF16-9216-4914-A037-651D29AD4837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF36A42-3280-41AA-9FAB-790A61B00969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF36A42-3280-41AA-9FAB-790A61B00969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF36A42-3280-41AA-9FAB-790A61B00969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF36A42-3280-41AA-9FAB-790A61B00969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FB9079-FD46-417E-8BC7-ED696BE2F2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FB9079-FD46-417E-8BC7-ED696BE2F2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FB9079-FD46-417E-8BC7-ED696BE2F2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FB9079-FD46-417E-8BC7-ED696BE2F2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7D24C3-E4C6-468C-8D39-EC1A77570C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7D24C3-E4C6-468C-8D39-EC1A77570C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7D24C3-E4C6-468C-8D39-EC1A77570C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7D24C3-E4C6-468C-8D39-EC1A77570C29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6A35BF-EE9C-46E7-B200-3ED7B21B8CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6A35BF-EE9C-46E7-B200-3ED7B21B8CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6A35BF-EE9C-46E7-B200-3ED7B21B8CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6A35BF-EE9C-46E7-B200-3ED7B21B8CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C950BCBE-1C03-4BD4-8F60-18CE8E0A53FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C950BCBE-1C03-4BD4-8F60-18CE8E0A53FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C950BCBE-1C03-4BD4-8F60-18CE8E0A53FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C950BCBE-1C03-4BD4-8F60-18CE8E0A53FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E8D7B551-5D1A-4445-B93E-FA41903DA7DF} = {1CB5CABB-3BF4-45E0-A421-E28EB771BA2F}
+		{3EF36A42-3280-41AA-9FAB-790A61B00969} = {E8D7B551-5D1A-4445-B93E-FA41903DA7DF}
+	EndGlobalSection
+EndGlobal

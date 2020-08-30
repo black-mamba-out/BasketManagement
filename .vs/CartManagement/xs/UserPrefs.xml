@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{5B78EF16-9216-4914-A037-651D29AD4837}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CartManagement/Program.cs">
+    <Files>
+      <File FileName="CartManagement/Startup.cs" Line="53" Column="36" />
+      <File FileName="CartManagement/Program.cs" Line="23" Column="54" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CartManagement" expanded="True">
+            <Node name="CartManagement" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="CartManagement.Business" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+            <Node name="CartManagement.DataLayer" expanded="True">
+              <Node name="Repositories" expanded="True" />
+            </Node>
+            <Node name="CartManagement.Domain" expanded="True">
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="docker-compose" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/blacklivesmatter/Projects/dotnetcore/CartManagement/CartManagement/Controllers/CartController.cs" relfile="CartManagement/Controllers/CartController.cs" line="28" column="1" />
+      <Breakpoint file="/Users/blacklivesmatter/Projects/dotnetcore/CartManagement/CartManagement/Controllers/CartController.cs" relfile="CartManagement/Controllers/CartController.cs" line="34" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CartManagement PreferredExecutionTarget="/Applications/Opera.app" />
+</Properties>

@@ -1,0 +1,37 @@
+version: '3.4'
+
+networks:
+  cartmanagement-dev:
+    driver: bridge 
+
+services:
+  cartmanagement:
+    image: cartmanagement:latest
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:5000"     
+    environment:
+      DB_CONNECTION_STRING: "host=postgres_image;port=5432;database=cartdb;username=cartuser;password=cartuser"
+    networks:
+      - cartmanagement-dev  
+  
+  postgres_image:
+    image: postgres:latest
+    ports:
+      - "5432"
+    restart: always
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_USER: "cartuser"
+      POSTGRES_PASSWORD: "cartuser"
+      POSTGRES_DB: "cartdb"
+    networks:
+      - cartmanagement-dev
+volumes:
+  db_volume:
