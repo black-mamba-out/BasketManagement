@@ -54,7 +54,7 @@ namespace CartManagement
                     Contact = new OpenApiContact
                     {
                         Name = "Bülent COŞAN",
-                        Email = string.Empty,
+                        Email = "bulentcosann@gmail.com",
                         Url = new Uri("https://twitter.com/bulentcosan"),
                     },
                     License = new OpenApiLicense
