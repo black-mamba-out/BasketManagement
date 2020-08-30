@@ -1,1 +1,0 @@
-/Users/blacklivesmatter/Projects/dotnetcore/CartManagement/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
