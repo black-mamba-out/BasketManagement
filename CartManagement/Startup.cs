@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CartManagement.Business.Interfaces;
 using CartManagement.Business.Services;
 using CartManagement.DataLayer;
+using CartManagement.DataLayer.Interfaces;
 using CartManagement.DataLayer.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,6 +36,10 @@ namespace CartManagement
             var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
             services.AddDbContext<CartManagementDbContext>(options =>
             options.UseNpgsql(connectionString));
+            services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<ICartService, CartService>();
 
         }
 
@@ -46,7 +51,7 @@ namespace CartManagement
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
 

@@ -4,9 +4,9 @@ using CartManagement.Domain.Entities;
 
 namespace CartManagement.DataLayer.Interfaces
 {
-    public interface ICartRepository
+    public interface ICustomerRepository
     {
-        void Save();
-        void AddProductToCart(Product product, Customer customer, int quantity);
+        Customer GetCustomer(int id);
+        List<Customer> GetCustomers();
     }
 }

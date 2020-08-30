@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using CartManagement.Domain.Entities;
+using CartManagement.Domain.Responses;
 
 namespace CartManagement.Business.Interfaces
 {
     public interface ICartService
     {
-        Product GetProduct(int id);
-        List<Product> GetProducts();
+        AddProductToCartResponse AddProductToCart(int customerId, int productId, int quantity);
     }
 }

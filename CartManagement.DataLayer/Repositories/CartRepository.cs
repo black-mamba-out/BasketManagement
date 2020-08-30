@@ -14,20 +14,19 @@ namespace CartManagement.DataLayer.Repositories
         {
             _context = context;
         }
-        public void AddProduct(Guid cartId, Customer customer, Product product)
+
+        public void AddProductToCart(Product product, Customer customer, int quantity)
         {
-            throw new NotImplementedException();
+            CartProduct cartProduct = new CartProduct
+            {
+                ProductId = product.Id,
+                CustomerId = customer.Id,
+                Quantity = quantity
+            };
+            _context.CartProducts.Add(cartProduct);
         }
 
-        public Product GetProduct(int id)
-        {
-            return _context.Products.Where(x => x.Id == id).FirstOrDefault();
-        }
 
-        public List<Product> GetProducts()
-        {
-            return _context.Products.ToList();
-        }
 
         public void Save()
         {

@@ -6,6 +6,6 @@ namespace CartManagement.Domain.Entities
     public class CustomerCart
     {
         public Customer Customer { get; set; }
-        public List<Cart> Products { get; set; }
+        public List<CartProduct> CartProducts { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace CartManagement.DataLayer
         {
 
         }
-        public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartProduct> CartProducts { get; set; }
 
         public DbSet<Product> Products { get; set; }
 
@@ -22,7 +22,7 @@ namespace CartManagement.DataLayer
         {
             base.OnModelCreating(modelBuilder);
 
-            new CartMap(modelBuilder.Entity<Cart>());
+            new CartMap(modelBuilder.Entity<CartProduct>());
             new ProductMap(modelBuilder.Entity<Product>());
             new CustomerMap(modelBuilder.Entity<Customer>());
         }

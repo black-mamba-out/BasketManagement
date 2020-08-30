@@ -17,16 +17,18 @@ CREATE TABLE  product (
     record_status boolean NOT NULL
 );
 
-CREATE TABLE cart
+CREATE TABLE cart_product
 (
+    id serial PRIMARY KEY,
     user_id INTEGER NOT NULL,
     product_id  INTEGER NOT NULL,
+    quantity INTEGER NOT NULL,
     record_status boolean NOT NULL
 );
 
 ALTER TABLE "customer" OWNER TO cartuser;
 ALTER TABLE "product" OWNER TO cartuser;
-ALTER TABLE "cart" OWNER TO cartuser;
+ALTER TABLE "cart_product" OWNER TO cartuser;
 
 
 Insert into customer(name,email,phone_number,record_status) values( 'Si Senor','a@b', '+902122121212', true);
